@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>WCAG Accesssibility Error Report</title>
+
+	<style type="text/css">
+		table {
+			border-collapse: collapse;
+			color: black;
+			font-family: arial, helvetica, sans-serif;
+			width: 100%;
+			border: 2px solid #167F92;
+		}
+
+		th {
+			text-align: center;
+			font-family: sans-serif;
+			background-color: #167F92;
+			color: #FFF;
+			font-size: 20px;
+		}
+
+		td,
+		th {
+			border: 1px solid #167F92;
+			vertical-align: text-top;
+			padding: 15px;
+			word-break: break-word;
+		}
+
+		tbody tr:nth-child(even) {
+			background: #ddd;
+		}
+
+		tbody tr:nth-child(odd) {
+			background: #F0F0F0;
+		}
+
+		header {
+			font-family: arial, helvetica, sans-serif;
+			font-size: 14px;
+			padding: 30px;
+			background-color: rgb(22, 127, 146);
+			color: white;
+			margin-bottom: 15px;
+		}
+
+		header p {
+			font-size: 14px;
+			margin-bottom: 5px;
+			margin-top: 0;
+		}
+
+		.issue-type {
+			width: 15%;
+			text-align: center;
+		}
+
+		.wcag-issue {
+			width: 20%;
+		}
+
+		.element {
+			width: 40%
+		}
+
+		.description {
+			width: 25%
+		}
+
+		.NOTIFY {
+			color: yellow;
+		}
+		.ERROR {
+			color: red;
+		}
+
+		.NOTICE {
+			color: blue;
+		}
+
+		.WARNING {
+			color: #BBC400;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<header>
+		<h1>WCAG Accessibility Report for "{{reportName}}"</h1>
+		<p><span class="NOTIFY">Date created: </span> {{date}}</p>
+		<p><span class="NOTIFY">Time: </span> {{time}}</p>
+		<p><span class="NOTIFY">WCAG Level: </span> {{level}}</p>
+	</header>
+
+	<table>
+		<thead>
+			<tr>
+				<th class="issue-type">Issue Type</th>
+				<th class="wcag-issue">WCAG Issue</th>
+				<th class="element">Element</th>
+				<th class="description">Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each data}}
+			<tr>
+				<td class="{{heading}} issue-type">{{heading}}</td>
+				<td class="wcag-issue">{{issue}}</td>
+				<td class="element">{{element.node}}</td>
+				<td class="description">{{description}}</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+
+</body>
+
+</html>

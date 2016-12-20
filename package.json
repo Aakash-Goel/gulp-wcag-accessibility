@@ -1,0 +1,43 @@
+{
+  "name": "gulp-wcag-accessibility",
+  "version": "0.0.1",
+  "description": "Grade your site's accessibility and generate a report from different WCAG levels",
+  "main": "index.js",
+  "engines": {
+    "node": ">=5.0.0",
+    "npm": ">=3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aakash-Goel/gulp-wcag-accessibility.git"
+  },
+  "keywords": [
+    "gulpplugin",
+    "accessibility",
+    "a11y",
+    "analysis",
+    "report",
+    "WCAG"
+  ],
+  "author": "Aakash Goel <se.aakashgoel@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aakash-Goel/gulp-wcag-accessibility/issues"
+  },
+  "homepage": "https://github.com/Aakash-Goel/gulp-wcag-accessibility",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean:report": "rimraf reports"
+  },
+  "dependencies": {
+    "access-sniff": "^3.0.1",
+    "gulp-util": "^3.0.7",
+    "handlebars": "^4.0.6",
+    "mkdirp": "^0.5.1",
+    "through2": "^2.0.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "rimraf": "^2.5.4"
+  }
+}
